@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage</title>
+  <%- include("partial/style.ejs") %>
+</head>
+<body>
+  <%- include("partial/nav.ejs") %>
+
+  <div class="container mt-4">
+    <div class="row g-4">
+      <% blogs.forEach(blog => { %>
+        <div class="col-md-3">
+          <div class="card h-100">
+            <img src="<%= blog.coverImageUrl %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%= blog.title %></h5>
+              <a href="/blog/<%= blog._id %>" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <%- include("partial/script.ejs") %>
+</body>
+</html>

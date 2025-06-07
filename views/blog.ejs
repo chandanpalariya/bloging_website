@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <%- include('./partial/style') %>
+  </head>
+  <body>
+    <%- include('./partial/nav') %>
+    <div class="container">
+      <h1><%= blog.title %></h1>
+      <img src="<%= blog.coverImageUrl %>" alt="" width="500px" />
+      <pre><%= blog.body %></pre>
+    </div>
+
+    <div class="container">
+        <img src="<%=blog.createdBy.profileImageUrl  %>" width="50px">
+        <%= blog.createdBy.fullName %>
+    </div>
+
+    <%- include('./partial/script') %>
+  </body>
+</html>

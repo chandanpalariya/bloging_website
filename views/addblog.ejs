@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partial/style') %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/blog" method="POST" enctype="multipart/form-data">
+        <div  >
+
+         <div class="container mt-3" >
+        <label for="exampleInputEmail1" class="form-label">cover Image</label>
+        <input type="file" class="form-control" name="coverImageUrl" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+
+    </div>
+
+    <div class="container mt-3" >
+         <label for="exampleInputEmail1" class="form-label">title</label>
+         <input type="text" class="form-control" name="title" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+
+    </div>
+
+   <div class="container mt-3" >
+         <label for="exampleInputEmail1" class="form-label">body</label>
+           <textarea class="form-control" name="body" id="essayBox" rows="8"></textarea>
+
+
+    </div>
+    <div class="mb-3">
+        <input class="btn btn-primary " type="submit" value="Submit">
+
+    </div>
+
+    
+
+
+
+    </div>
+
+   
+  
+    </form>
+    
+
+ <%- include('./partial/script') %>   
+</body>
+</html>

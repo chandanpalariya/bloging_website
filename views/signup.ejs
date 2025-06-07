@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup</title>
+  <%- include("partial/style.ejs") %>
+</head>
+
+<body class="bg-light">
+  <%- include("partial/nav.ejs") %>
+
+  <div class="d-flex justify-content-center align-items-center vh-100">
+    <form action="/user/signup" method="POST" class="bg-white p-4 rounded shadow" style="width: 100%; max-width: 400px;">
+      <h2 class="text-center mb-4">Sign Up</h2>
+
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input type="text" name="fullName" class="form-control" id="fullName">
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="email">
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="password">
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </form>
+  </div>
+
+  <%- include("partial/script.ejs") %>
+</body>
+</html>
