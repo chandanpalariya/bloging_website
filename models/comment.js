@@ -6,9 +6,14 @@ const commentSchema=new Schema({
         required:true,
     },
 
+     createdBy: {
+            type: Schema.Types.ObjectId, // ✅ Corrected
+            ref: "user"
+        },
+
     blogId:{
-        type:Schema.types.ObjectId,
-        ref:"user",
+        type:Schema.Types.ObjectId,
+        ref:"blog",
 
     }
 },{timestamps:true})
