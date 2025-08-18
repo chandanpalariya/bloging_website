@@ -5,7 +5,8 @@ const mongoose=require('mongoose');
 const cookieParser=require("cookie-parser");
 const {checkforAuthenticationCookie}=require('./middleware/authentication')
 const Blog=require('./models/blog')
-const blogRouter=require("./routes/blog")
+const blogRouter=require("./routes/blog");
+const { configDotenv } = require("dotenv");
 
 const app=express();
 
@@ -16,9 +17,9 @@ app.use(cookieParser());
 app.use(checkforAuthenticationCookie("token"))
 
 
-const port=8000;
+const port=process.env.port||8000;
 
-mongoose.connect("mongodb://127.0.0.1:27017/chandan-blog").then(()=>{
+mongoose.connect("mongodb+srv://ex-chandan:chandan2006@cluster0.10rsh.mongodb.net/blogs").then(()=>{
    console.log("mongodb connected succesfully");
 })
 
